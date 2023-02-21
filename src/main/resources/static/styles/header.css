@@ -1,0 +1,51 @@
+.header {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 7fr 2fr;
+  justify-items: center;
+  align-items: center;
+  border-color: black;
+  border-bottom: 0.2ch;
+  border-bottom-style: solid;
+}
+
+.header__logo {
+  width: 200px;
+  height: 120px;
+}
+
+.header__authorization {
+  border: 0ch;
+  color: white;
+  font-size: medium;
+  background-color: rgb(38, 174, 96);
+  width: 7em;
+  height: 2em;
+  border-radius: 5px;
+}
+.header__novigation {
+  width: 80%;
+  display: grid;
+  grid-template-columns: 3fr 3fr 4fr;
+  justify-items: center;
+}
+
+.header__novigation-button {
+  border: 0ch;
+  background-color: white;
+  color: rgb(49, 49, 49);
+  font-size: larger;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: max-content;
+}
+
+.header__novigation-button:hover {
+  color: rgb(38, 174, 96);
+}
+
+.header__novigation-button_active {
+  color: rgb(38, 174, 96);
+  border-color: rgb(38, 174, 96);
+  border-bottom: 0.2ch;
+  border-style: solid;
+}
