@@ -10,7 +10,7 @@ public class MainController {
     @Autowired
     private JythonService jythonService;
 
-    @GetMapping("/main")
+    @GetMapping("/platform")
     public String main(){
         return "main";
     }

@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="/styles/main.css" />
-    <link rel="stylesheet" href="/styles/header.css" />
-    <link rel="stylesheet" href="/styles/all.css" />
+    <link rel="stylesheet" href="/styles/main.css"/>
+    <link rel="stylesheet" href="/styles/header.css"/>
+    <link rel="stylesheet" href="/styles/all.css"/>
 
     <link
       rel="stylesheet"
@@ -41,7 +41,7 @@
       <label class="main__info__text">
         Получение 3Д модели зуба в несколько кликов. Приступите к генерации прямо сейчас.
       </label></div>
-      <img src="picture/model.png" class="main__picture" alt="wal_paper">
+      <img src="/picture/model.png" class="main__picture" alt="wal_paper">
       <div class="main__info">
         <h1 class="main__info__title">
           Для генерации требуется три проекции необходимых зубов
@@ -85,19 +85,5 @@
   $("#about").click(function (){
     document.location.href ="/about"
   });
-  $("#about").click(function (){
-    document.location.href ="/about"
-  });
-  $("#platform").click(function (){
-    if ([[${user.role}]] === "USER" || [[${user.role}]] === "ADMIN"  )
-    document.location.href ="/platform"
-  });
-  $("#developer").click(function () {
-    if ([[${user.role}]] === "ADMIN") {
-    document.location.href = "/developer"
-  }
-  });
-
-
   </script>
 </html>

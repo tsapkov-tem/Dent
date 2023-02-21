@@ -6,11 +6,9 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class JythonService {
-    public String runPython() {
+    public void runPython() {
         try (PythonInterpreter pyInterp = new PythonInterpreter()) {
-            pyInterp.exec("x = \"HELLO\"");
-            PyObject x = pyInterp.get("x");
-            return x.asString();
+            pyInterp.execfile("GAN.py");
         }
     }
 }

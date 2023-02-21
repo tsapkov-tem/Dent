@@ -34,20 +34,20 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .csrf ().disable ()
                 .authorizeRequests ()
                 .antMatchers("/register").not().fullyAuthenticated()
-                .antMatchers("/main").not().fullyAuthenticated()
+                .antMatchers("/about").not().fullyAuthenticated()
                 .anyRequest ()
                 .authenticated ()
                 .and()
                 .formLogin()
 //                .loginPage ("/auth/login").permitAll ()
-                 .defaultSuccessUrl ("/main", true)
+                 .defaultSuccessUrl ("/platform", true)
                 .and()
                 .logout ()
                 .logoutRequestMatcher (new AntPathRequestMatcher ("/auth/logout", "GET"))
                 .invalidateHttpSession (true)
                 .clearAuthentication (true)
                 .deleteCookies ("JSESSIONID")
-                .logoutSuccessUrl ("/main");
+                .logoutSuccessUrl ("/platform");
     }
 
     @Override
