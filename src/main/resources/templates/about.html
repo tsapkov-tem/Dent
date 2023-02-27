@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DentGen</title>
 
-    <link rel="stylesheet" href="/static/styles/all.css" />
-    <link rel="stylesheet" href="/static/styles/header.css" />
-    <link rel="stylesheet" href="/static/styles/about.css" />
+    <link rel="stylesheet" href="/css/all.css" />
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/about.css" />
 
     <link
       rel="stylesheet"
@@ -18,27 +18,60 @@
   </head>
   <body>
     <header class="header">
-      <img src="/static/picture/logo.png" class="header__logo" alt="logo" />
+      <img src="/picture/logo.png" class="header__logo" alt="logo" />
       <div class="header__novigation">
         <button
           class="header__novigation-button header__novigation-button_active"
           id="about"
+          th:onclick="|window.location.href='/about'|"
         >
           About
         </button>
-        <button class="header__novigation-button" id="platform">
+        <button class="header__novigation-button" id="platform" th:onclick="|window.location.href='/platform'|">
           Platform <i class="bi bi-shield-lock lo lock__platform"></i>
         </button>
-        <button class="header__novigation-button" id="developer">
+        <button class="header__novigation-button" id="developer" th:onclick="|window.location.href='/developer'|">
           For developer <i class="bi bi-shield-lock lo lock__developer"></i>
         </button>
       </div>
-      <button class="header__authorization" id="login">
+      <button class="header__authorization" id="login" th:onclick="|window.location.href='/logout'|">
         <i class="bi bi-person-circle"></i> Log in
       </button>
     </header>
     <main class="main">
-        <img src="/static/picture/">
+      <div class="main__background">
+        <img src="/picture/tooth_3d.png" class="main__background__pic" />
+      </div>
+      <div class="main__info">
+        <h1 main__info__title>Добро пожаловать на DentGen</h1>
+        <p class="main__info__text">
+          Этот ресурс позволяет генерировать 3д модели будущих коронок и
+          имплантов. Вы загружаете снимки зубов, а наша нейронная сеть
+          сгенерирует 3д модель недостающего зуба. Приступите к генерации после
+          регистрации.
+        </p>
+      </div>
+      <form
+        class="main__register-form"
+        th:action="@{/about}"
+        th:object="${user}"
+        method="post"
+      >
+        <input
+          class="main__register-form__input"
+          placeholder="Username"
+          th:field="*{username}"
+        />
+
+        <input
+          class="main__register-form__input"
+          placeholder="Password"
+          th:field="*{password}"
+        />
+        <button class="main__register-form__button" type="submit">
+          Register
+        </button>
+      </form>
     </main>
   </body>
 </html>

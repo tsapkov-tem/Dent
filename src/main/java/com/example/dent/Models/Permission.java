@@ -1,8 +1,8 @@
 package com.example.dent.Models;
 
 public enum Permission {
-    READ("read"),
-    All("all");
+    USER("user"),
+    DEVELOPER("dev");
 
     private final String permission;
 

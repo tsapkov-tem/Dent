@@ -33,8 +33,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .csrf ().disable ()
                 .authorizeRequests ()
-                .antMatchers("/register").not().fullyAuthenticated()
-                .antMatchers("/about").not().fullyAuthenticated()
+//                .antMatchers("/about").not().fullyAuthenticated()
+                .antMatchers("/about", "/picture/**", "/css/**").permitAll()
                 .anyRequest ()
                 .authenticated ()
                 .and()
@@ -43,11 +43,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                  .defaultSuccessUrl ("/platform", true)
                 .and()
                 .logout ()
-                .logoutRequestMatcher (new AntPathRequestMatcher ("/auth/logout", "GET"))
+//                .logoutRequestMatcher (new AntPathRequestMatcher ("/logout", "GET"))
                 .invalidateHttpSession (true)
                 .clearAuthentication (true)
                 .deleteCookies ("JSESSIONID")
-                .logoutSuccessUrl ("/platform");
+                .logoutSuccessUrl ("/");
     }
 
     @Override

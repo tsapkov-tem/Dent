@@ -1,0 +1,56 @@
+.main__background {
+  position: absolute;
+  right: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 79%;
+  border: 0.2ch;
+  border-radius: 15px;
+  border-color: black;
+  border-style: dashed;
+  z-index: -10;
+  top: 120px;
+}
+
+.main__background__pic {
+  border-radius: 15px;
+  width: 90%;
+  height: 90%;
+}
+
+.main__info {
+  margin-top: 5%;
+  width: 40%;
+  text-align: center;
+}
+
+.main__info__title {
+  width: 90%;
+}
+
+.main__info__text {
+  width: 90%;
+}
+
+.main__register-form {
+  margin-top: 5%;
+  width: 40%;
+  display: grid;
+  justify-content: center;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.main__register-form__input {
+  margin-bottom: 5px;
+}
+
+.main__register-form__button {
+  border: 0ch;
+  color: white;
+  font-size: medium;
+  background-color: rgb(38, 174, 96);
+  height: 2em;
+  border-radius: 5px;
+}
