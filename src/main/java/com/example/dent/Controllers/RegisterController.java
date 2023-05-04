@@ -4,7 +4,6 @@ import com.example.dent.Models.Role;
 import com.example.dent.Models.Users;
 import com.example.dent.Services.UsersService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

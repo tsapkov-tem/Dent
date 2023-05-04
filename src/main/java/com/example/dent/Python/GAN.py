@@ -139,4 +139,4 @@ def train(epochs=1, batch_size=128):
 
 
 if __name__ == '__main__':
-    train(40, 64)
+    train(1000, 128)

@@ -4,74 +4,101 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DentGen</title>
 
     <link rel="stylesheet" href="/css/all.css" />
     <link rel="stylesheet" href="/css/header.css" />
     <link rel="stylesheet" href="/css/about.css" />
-
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
-    />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>DentGen</title>
   </head>
   <body>
-    <header class="header">
-      <img src="/picture/logo.png" class="header__logo" alt="logo" />
-      <div class="header__novigation">
-        <button
-          class="header__novigation-button header__novigation-button_active"
-          id="about"
-          th:onclick="|window.location.href='/about'|"
-        >
-          About
-        </button>
-        <button class="header__novigation-button" id="platform" th:onclick="|window.location.href='/platform'|">
-          Platform <i class="bi bi-shield-lock lo lock__platform"></i>
-        </button>
-        <button class="header__novigation-button" id="developer" th:onclick="|window.location.href='/developer'|">
-          For developer <i class="bi bi-shield-lock lo lock__developer"></i>
-        </button>
+    <header class="header_about">
+      <div class="header__logo">
+        <div class="header__logo__name">DentGen</div>
+        <div class="header__logo__info">Разработано для зубных техников</div>
       </div>
-      <button class="header__authorization" id="login" th:onclick="|window.location.href='/logout'|">
-        <i class="bi bi-person-circle"></i> Log in
-      </button>
+      <div class="header__flag">
+        <div class="header__flag_white"></div>
+        <div class="header__flag_blue"></div>
+        <div class="header__flag_red"></div>
+      </div>
+      <!-- <div class="header__line"></div> -->
     </header>
     <main class="main">
-      <div class="main__background">
-        <img src="/picture/tooth_3d.png" class="main__background__pic" />
-      </div>
+      <div class="main__title">DentGen</div>
       <div class="main__info">
-        <h1 main__info__title>Добро пожаловать на DentGen</h1>
-        <p class="main__info__text">
-          Этот ресурс позволяет генерировать 3д модели будущих коронок и
-          имплантов. Вы загружаете снимки зубов, а наша нейронная сеть
-          сгенерирует 3д модель недостающего зуба. Приступите к генерации после
-          регистрации.
-        </p>
+        <div class="main__info__description">
+          DentGen - платформа 3д моделирования моделей зубов с использованием
+          искусственного интеллекта для обработки и генерации челюстей на уровне
+          нейронных сетей.
+        </div>
+        <div class="main__info__examples">
+          <img src="/picture/example_1.png" alt="" class="example_1" />
+          <img src="/picture/example_1.png" alt="" class="example_2" />
+          <img src="/picture/example_1.png" alt="" class="example_3" />
+          <img src="/picture/example_1.png" alt="" class="example_4" />
+        </div>
       </div>
-      <form
-        class="main__register-form"
-        th:action="@{/about}"
-        th:object="${user}"
-        method="post"
-      >
-        <input
-          class="main__register-form__input"
-          placeholder="Username"
-          th:field="*{username}"
-        />
-
-        <input
-          class="main__register-form__input"
-          placeholder="Password"
-          th:field="*{password}"
-        />
-        <button class="main__register-form__button" type="submit">
-          Register
+      <div class="overflow">
+        <div class="main__triangle-1"></div>
+      </div>
+      <div class="main__operations">
+        <div class="main__operations__text">Работа с облаками точек</div>
+        <div class="main__operations__text">Подгонка размера</div>
+        <div class="main__operations__line"></div>
+        <div class="main__operations__line"></div>
+        <div class="main__operations__text">Формирование фиссуры</div>
+        <div class="main__operations__text">Обработка информации о челюсти</div>
+        <div class="main__operations__line"></div>
+        <div class="main__operations__line"></div>
+        <div class="main__operations__text">Сглаживание граней</div>
+        <div class="main__operations__text">Подгонка высоты</div>
+      </div>
+      <div class="overflow">
+        <div class="main__triangle-2"></div>
+      </div>
+      <div class="main__register">
+        <form
+          class="main__register__form"
+          th:action="@{/about}"
+          th:object="${user}"
+          method="post"
+        >
+          <label class="register__label">Логин</label>
+          <input
+            class="register__input"
+            type="text"
+            maxlength="15"
+            th:field="*{username}"
+          />
+          <label class="register__label">Пароль</label>
+          <input
+            class="register__input"
+            type="text"
+            maxlength="15"
+            th:field="*{password}"
+          />
+          <label class="register__label">Повторите пароль</label>
+          <input
+            class="register__input"
+            type="text"
+            maxlength="15"
+          />
+          <button class="register__button" type="submit">
+            Зарегистрироваться
+          </button>
+        </form>
+        <div class="main__register__info">
+          Зарегистрируйтесь и приступите к генерации
+        </div>
+        <button
+          class="register__link"
+          type="submit"
+          th:onclick="|window.location.href='/logout'|"
+        >
+          У меня есть аккаунт
         </button>
-      </form>
+      </div>
+      <div class="main__rectangle"></div>
     </main>
   </body>
 </html>

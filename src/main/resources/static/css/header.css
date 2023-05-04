@@ -1,52 +1,71 @@
 .header {
-  width: 100%;
   display: grid;
-  grid-template-columns: 2fr 7fr 2fr;
-  justify-items: center;
+  grid-template-columns: 1.2fr 3.8fr 1fr;
+}
+
+.header__buttons {
+  background-color: rgba(0, 0, 0, 0);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   align-items: center;
-  border-color: black;
-  border-bottom: 0.2ch;
-  border-bottom-style: solid;
-  height: 120px;
 }
 
-.header__logo {
-  width: 200px;
-  height: 120px;
+.header__buttons__button {
+  height: max-content;
+  font-size: 1.7vmax;
+  border: 0;
 }
 
-.header__authorization {
-  border: 0ch;
-  color: white;
-  font-size: medium;
-  background-color: rgb(38, 174, 96);
-  width: 7em;
-  height: 2em;
-  border-radius: 5px;
+.header__logo__name {
+  padding-left: 0.5vmax;
+  padding-top: 0.5em;
+  display: inline-block;
+  font-size: 3vmax;
+  background: linear-gradient(to right, #00a0dd 58%, #004a81 42%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-.header__novigation {
-  width: 80%;
+
+.header__logo__info {
+  padding-left: 0.5vmax;
+  margin-top: -1vmax;
+  font-size: 1vmax;
+}
+
+.header__line {
+  position: absolute;
+  width: 100%;
+  top: 7vmax;
+  border-bottom: 0.7px solid #004a81;
+}
+
+.header__flag {
+  position: absolute;
+  right: 1vmax;
+  top: 1vmax;
   display: grid;
-  grid-template-columns: 3fr 3fr 4fr;
-  justify-items: center;
+  grid-template-rows: 1fr 1fr 1fr;
 }
 
-.header__novigation-button {
-  border: 0ch;
+.header__flag_white {
+  margin-top: 5px;
+  width: 3vmax;
+  height: 1vmax;
+  transform: rotate(-30deg);
   background-color: white;
-  color: rgb(49, 49, 49);
-  font-size: larger;
-  grid-template-columns: 1fr 1fr 1fr;
-  width: max-content;
 }
 
-.header__novigation-button:hover {
-  color: rgb(38, 174, 96);
+.header__flag_blue {
+  width: 3vmax;
+  height: 1vmax;
+  transform: rotate(-30deg);
+  background-color: blue;
 }
 
-.header__novigation-button_active {
-  color: rgb(38, 174, 96);
-  border-color: rgb(38, 174, 96);
-  border-bottom: 0.2ch;
-  border-style: solid;
+.header__flag_red {
+  width: 3vmax;
+  height: 1vmax;
+  margin-top: -5px;
+  transform: rotate(-30deg);
+  background-color: red;
 }

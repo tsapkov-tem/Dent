@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/css/all.css" />
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/login.css" />
+
+    <title>DentGen</title>
+  </head>
+  <body>
+    <header class="header_about">
+      <div class="header__logo">
+        <div class="header__logo__name">DentGen</div>
+        <div class="header__logo__info">Разработано для зубных техников</div>
+      </div>
+      <div class="header__flag">
+        <div class="header__flag_white"></div>
+        <div class="header__flag_blue"></div>
+        <div class="header__flag_red"></div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="main__title">DentGen</div>
+      <div class="main__info">Введите логин и пароль</div>
+      <form class="main__form" action="/login" method="POST">
+        <input
+          class="auth__input"
+          type="text"
+          maxlength="15"
+          placeholder="Логин"
+          name="username"
+        />
+        <input
+          class="auth__input"
+          type="password"
+          name="password"
+          maxlength="15"
+          placeholder="Пароль"
+        />
+        <button class="auth__button">Войти</button>
+      </form>
+      <div class="main__link"><button class="auth__link" th:onclick="|window.location.href='/about'|">Отмена</button></div>
+    </main>
+  </body>
+</html>

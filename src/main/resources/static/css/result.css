@@ -1,0 +1,78 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+.main__title {
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 7vmax;
+  z-index: 0;
+  position: relative;
+  bottom: 20px;
+  mix-blend-mode: soft-light;
+  filter: blur(3px);
+}
+
+.main__triangle-2 {
+  position: relative;
+  top: -0.1vmax;
+  background-color: rgba(0, 0, 0, 0);
+  border: 50vmax solid transparent;
+  border-top: 5vmax solid #004a81;
+}
+
+.main__triangle-1 {
+  background-color: rgba(0, 0, 0, 0);
+  border: 50vmax solid transparent;
+  border-bottom: 5vmax solid #004a81;
+  position: relative;
+  top: -49vmax;
+}
+
+.overflow {
+  overflow: clip;
+  height: 5.85vmax;
+}
+
+.main__result {
+  background-image: url(/picture/photo-3.jpg);
+  background-size: 100%;
+  backdrop-filter: blur(40px);
+  height: 40vmax;
+  border: 2vmax solid #004a81;
+  display: grid;
+  grid-template-rows: 30vmax 1fr 1fr;
+  justify-items: center;
+}
+
+.main__result__img {
+  height: 27vmax;
+  width: 27vmax;
+  margin-top: 2vmax;
+  border: 5px solid #004a81;
+  border-radius: 20px;
+}
+
+.main__result__info {
+  font-size: 1.7vmax;
+  background: none;
+}
+
+.main__result__buttons {
+  width: 100%;
+  background: none;
+}
+
+.main__button {
+  width: max-content;
+  padding-left: 1em;
+  padding-right: 1em;
+  height: 2em;
+  border: none;
+  color: white;
+  background-color: #004a81;
+  border-radius: 10px;
+}

@@ -1,115 +1,126 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" lang="">
-  <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-      <link rel="stylesheet" href="/css/all.css" />
-      <link rel="stylesheet" href="/css/header.css" />
-      <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/all.css" />
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/platform.css" />
 
-      <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
-      />
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-      <title>DentGen</title>
-    </head>
-    <body>
-      <header class="header">
-        <img src="picture/logo.png" class="header__logo" alt="logo" />
-        <div class="header__novigation">
-          <button class="header__novigation-button" id="about" th:onclick="|window.location.href='/about'|">About</button>
-          <button
-            class="header__novigation-button header__novigation-button_active"
-            id="platform"
-            th:onclick="|window.location.href='/platform'|"
-          >
-            Platform
-          </button>
-          <button class="header__novigation-button" id="developer" th:onclick="|window.location.href='/developer'|">
-            For developer <i class="bi bi-shield-lock lo lock__developer"></i>
-          </button>
-        </div>
-        <button class="header__authorization" id="login" th:onclick="|window.location.href='/logout'|">
-          <i class="bi bi-person-circle"></i> Log in
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__logo">
+        <div class="header__logo__name">DentGen</div>
+        <div class="header__logo__info">Разработано для зубных техников</div>
+      </div>
+      <div class="header__buttons">
+        <button
+          class="header__buttons__button"
+          th:onclick="|window.location.href='/about'|"
+        >
+          О ресурсе
         </button>
-      </header>
-      <main class="main">
-        <div class="main__info">
-          <h1 class="main__info__title">3Д моделирование зуба</h1>
-          <label class="main__info__text">
-            Получение 3Д модели зуба в несколько кликов. Приступите к генерации
-            прямо сейчас.
-          </label>
+        <button
+          class="header__buttons__button"
+          th:onclick="|window.location.href='/platform'|"
+        >
+          Платформа
+        </button>
+        <button
+          class="header__buttons__button"
+          th:onclick="|window.location.href='/developer'|"
+        >
+          Для разработчиков
+        </button>
+        <button
+          class="header__buttons__button"
+          th:onclick="|window.location.href='/logout'|"
+        >
+          Вход
+        </button>
+      </div>
+      <div class="header__flag">
+        <div class="header__flag_white"></div>
+        <div class="header__flag_blue"></div>
+        <div class="header__flag_red"></div>
+      </div>
+      <div class="header__line"></div>
+    </header>
+    <main class="main">
+      <div class="main__title">DentGen</div>
+      <div class="main__info">
+        <div class="main__info__text">
+          Для моделирования будущей заготовки необходимы снимки зубов соседей и
+          фиссуры антагониста. Загрузите необходимые фотографии и приступите к
+          генерации
         </div>
-        <img
-          src="/picture/model.png"
-          class="main__picture"
-          alt="wal_paper"
-        />
-        <div class="main__info">
-          <h1 class="main__info__title">
-            Для генерации требуется три проекции необходимых зубов
-          </h1>
-          <label class="main__info__text">
-            Первая проекция - место отсутсвия зуба и его соседи с внешней
-            стороны Вторая проекция - зуб антагонист с внешней стороны Третья
-            проекция - фиссура зуба антагониста. С помощью этих проекций наша
-            нейронная сеть сгенерирует 3D модель недостающего зуба. Приступите к
-            генерации после загрузки изображений
-          </label>
-        </div>
-        <div class="main__load">
+      </div>
+      <div></div>
+      <div class="overflow">
+        <div class="main__triangle-1"></div>
+      </div>
+      <div class="main__load">
+        <div class="main__loads">
           <div
             class="main__load__container"
             onclick="$('#input_neighbors').click()"
           >
             <i class="bi bi-file-earmark-arrow-up main_icon"></i>
-            <label id="label_neighbors">Соседи</label>
-          </div>
-          <div
-            class="main__load__container"
-            onclick="$('#input_antagonist').click()"
-          >
-            <i class="bi bi-file-earmark-arrow-up main_icon"></i>
-            <label id="label_antagonist">Антагонист</label>
+            <label class="main__label" id="label_neighbors">Соседи</label>
           </div>
           <div
             class="main__load__container"
             onclick="$('#input_fissure').click()"
           >
             <i class="bi bi-file-earmark-arrow-up main_icon"></i>
-            <label id="label_fissure">Фиссура антагониста</label>
+            <label class="main__label" id="label_fissure"
+              >Фиссура антагониста</label
+            >
           </div>
         </div>
-        <div class="main__buttons">
-          <button class="main__input">Приступить к генерации</button>
-          <!-- <button class="main__cancel"> Прервать генерацию</button> -->
-        </div>
-        <input type="file" id="input_neighbors" style="display: none" />
-        <input type="file" id="input_antagonist" style="display: none" />
-        <input type="file" id="input_fissure" style="display: none" />
-      </main>
-    </body>
-    <script>
-      $("#input_neighbors").change(function () {
-        filename = this.files[0].name;
-        $("#label_neighbors").text(filename);
-      });
-      $("#input_antagonist").change(function () {
-        filename = this.files[0].name;
-        $("#label_antagonist").text(filename);
-      });
-      $("#input_fissure").change(function () {
-        filename = this.files[0].name;
-        $("#label_fissure").text(filename);
-      });
-      $("#about").click(function () {
-        document.location.href = "/about";
-      });
-    </script>
-  </html>
+        <form
+          th:action="@{/upload}"
+          enctype="multipart/form-data"
+          method="POST"
+          multiple="multiple"
+        >
+          <div class="main__buttons" type="submit">
+            <button class="main__buttons__start">Приступить к генерации</button>
+          </div>
+          <input
+            type="file"
+            name="files"
+            id="input_neighbors"
+            style="display: none"
+          />
+          <input
+            type="file"
+            name="files"
+            id="input_fissure"
+            style="display: none"
+          />
+        </form>
+      </div>
+    </main>
+  </body>
+  <script>
+    $("#input_neighbors").change(function () {
+      filename = this.files[0].name;
+      $("#label_neighbors").text(filename);
+    });
+    $("#input_fissure").change(function () {
+      filename = this.files[0].name;
+      $("#label_fissure").text(filename);
+    });
+  </script>
 </html>

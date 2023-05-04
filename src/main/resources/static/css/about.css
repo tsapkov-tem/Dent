@@ -1,56 +1,196 @@
-.main__background {
-  position: absolute;
-  right: 0px;
+.main {
   display: flex;
+  flex-direction: column;
+  text-align: center;
   justify-content: center;
-  align-items: center;
-  width: 60%;
-  height: 79%;
-  border: 0.2ch;
-  border-radius: 15px;
-  border-color: black;
-  border-style: dashed;
-  z-index: -10;
-  top: 120px;
 }
 
-.main__background__pic {
-  border-radius: 15px;
-  width: 90%;
-  height: 90%;
+.main__title {
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 7vmax;
+  z-index: 0;
+  position: relative;
+  bottom: 20px;
+  mix-blend-mode: soft-light;
+  filter: blur(3px);
 }
 
 .main__info {
-  margin-top: 5%;
-  width: 40%;
+  margin-top: 3em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: center;
+  justify-content: center;
+}
+
+.main__info__description {
+  background-color: white;
+  border-radius: 17px;
+  width: 30%;
+  margin-right: 30%;
+  height: 10vmax;
+  text-align: center;
+  font-size: 1.5vmax;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.main__info__examples {
+  margin-left: 3em;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.example_1 {
+  width: 18vmax;
+  position: absolute;
+  right: 19vmax;
+  top: 15vmax;
+  z-index: 200;
+}
+.example_2 {
+  width: 21vmax;
+  position: absolute;
+  left: 50vmax;
+  top: 21vmax;
+  z-index: 300;
+}
+.example_3 {
+  width: 18vmax;
+  position: absolute;
+  left: 55vmax;
+  top: 17vmax;
+  z-index: 500;
+}
+.example_4 {
+  width: 18vmax;
+  position: absolute;
+  left: 52vmax;
+  top: 13vmax;
+  z-index: 100;
+}
+
+.main__operations {
+  background-color: #004a81;
+  color: white;
+  display: grid;
+  height: 40vmax;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
   text-align: center;
 }
 
-.main__info__title {
-  width: 90%;
+.main__operations__line {
+  width: 30%;
+  height: 0;
+  border-bottom: 0.7px solid #ffffff;
 }
 
-.main__info__text {
-  width: 90%;
-}
-
-.main__register-form {
-  margin-top: 5%;
-  width: 40%;
-  display: grid;
-  justify-content: center;
-  grid-template-rows: 1fr 1fr 1fr;
-}
-
-.main__register-form__input {
-  margin-bottom: 5px;
-}
-
-.main__register-form__button {
-  border: 0ch;
+.main__operations__text {
+  font-size: 1.5vmax;
+  background-color: #004a81;
   color: white;
-  font-size: medium;
-  background-color: rgb(38, 174, 96);
-  height: 2em;
+}
+
+.main__triangle-2 {
+  position: relative;
+  top: -0.1vmax;
+  background-color: rgba(0, 0, 0, 0);
+  border: 50vmax solid transparent;
+  border-top: 5vmax solid #004a81;
+  background-color: #ffffff;
+}
+
+.main__triangle-1 {
+  background-color: rgba(0, 0, 0, 0);
+  border: 50vmax solid transparent;
+  border-bottom: 5vmax solid #004a81;
+  position: relative;
+  top: -49vmax;
+}
+
+.overflow {
+  overflow: clip;
+  height: 5.85vmax;
+}
+
+.main__register {
+  background-color: #ffffff;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 35vmax;
+  justify-items: center;
+  align-content: center;
+}
+
+.main__register__form {
+  background-color: #ffffff;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 20vmax;
+  align-items: center;
+}
+
+.main__register__info {
+  background-color: #ffffff;
+  font-size: 1.5vmax;
+  width: 50%;
+  margin-left: 2em;
+}
+
+.main__rectangle {
+  height: 50px;
+  width: 100%;
+  background-color: #004a81;
+}
+
+.register__label {
+  background-color: #ffffff;
+  text-align: end;
+  font-size: 1.5vmax;
+  margin-right: 1em;
+}
+
+.register__input {
   border-radius: 5px;
+  height: 2em;
+  width: 85%;
+  border: 0;
+  margin-right: 1em;
+  padding-left: 1em;
+}
+
+.register__input:focus {
+  justify-content: center;
+  box-shadow: 0.2vmax 0.2vmax 0.4vmax 0 #004a81;
+  outline: none;
+}
+
+.register__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  background-color: white;
+  width: max-content;
+  position: relative;
+  left: 4%;
+}
+
+.register__button {
+  height: 2em;
+  border-radius: 10px;
+  width: max-content;
+  padding-right: 1em;
+  padding-left: 1em;
+  color: #ffffff;
+  border: 0;
+  background-color: #004a81;
+  position: relative;
+  left: 70%;
 }

@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" href="/css/all.css" />
     <link rel="stylesheet" href="/css/header.css" />
-    <link rel="stylesheet" href="/css/developer.css" />
+    <link rel="stylesheet" href="/css/result.css" />
 
     <link
       rel="stylesheet"
@@ -38,37 +38,24 @@
     </header>
     <main class="main">
       <div class="main__title">DentGen</div>
-      <div class="main__info">Для загрузки новой версии нейросетевой модели, выберите ее и нажмите кнопку загрузить, мы самостоятельно проверим ее  </div>
-      <div class="main__container">
-      <div class="main__container__wallpaper"></div>
-        <form 
-        th:action="@{/uploadDev}"
-        enctype="multipart/form-data"
-        method="POST"
-        multiple="multiple"
-        class="main__container__form"
-      >
-        <div  onclick="$('#model').click()" class="main__load">
-            <i class="bi bi-file-earmark-arrow-up main_icon"></i>
-            <label class="main__label" id="label_model">Модель нейронной сети</label>
+      <div class="overflow">
+        <div class="main__triangle-1"></div>
+      </div>
+      <div class="main__result">
+        <img alt="result" class="main__result__img"  th:src="${file}" >
+        <div class="main__result__info">Достаточно ли естественный вид фиссуры сгенерированного зуба</div>
+        <div class="main__result__buttons">
+            <button class="main__button">
+              Да, скачать 3д модель
+          </button>
+            <button class="main__button">
+                Нет, сгенерировать новую
+            </button>
         </div>
-        <button class="main__button">Загрузить файл</button>
-        
-        <input
-          type="file"
-          name="files"
-          id="model"
-          style="display: none"
-        />
-    </form>
-      <div class="main__container__wallpaper"></div>
+      </div>
+      <div class="overflow">
+        <div class="main__triangle-2"></div>
       </div>
     </main>
 </body>
-<script>
-    $("#model").change(function () {
-      filename = this.files[0].name;
-      $("#label_model").text(filename);
-    });
-</script>
 </html>

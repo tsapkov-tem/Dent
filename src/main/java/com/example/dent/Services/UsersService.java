@@ -3,6 +3,7 @@ package com.example.dent.Services;
 import com.example.dent.Models.Users;
 import com.example.dent.Repository.UsersRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 
 @Service
